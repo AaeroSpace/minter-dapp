@@ -38,7 +38,7 @@ const format = {
 };
 
 const extraMetadata = {
-  external_url: "https://CatEyes.xyz", // Replace with your website or remove this line if you do not have one.
+  external_url: "https://cheerful-puffpuff-7dd8b5.netlify.app", // Replace with your website or remove this line if you do not have one.
 };
 
 // NFTPort Info
