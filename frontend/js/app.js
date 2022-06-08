@@ -104,8 +104,8 @@ async function checkChain() {
   let chainId = 0;
   if(chain === 'rinkeby') {
     chainId = 4;
-  } else if(chain === 'polygon') {
-    chainId = 137;
+  } else if(chain === 'Ethereum') {
+    chainId = 1;
   }
   if (window.ethereum.networkVersion !== chainId) {
     try {
@@ -130,15 +130,15 @@ async function checkChain() {
                 },
               ],
             });
-          } else if(chain === 'polygon') {
+          } else if(chain === 'Ethereum') {
             await window.ethereum.request({
               method: 'wallet_addEthereumChain',
               params: [
                 {
-                  chainName: 'Polygon Mainnet',
+                  chainName: 'Ethereum Mainnet',
                   chainId: web3.utils.toHex(chainId),
-                  nativeCurrency: { name: 'MATIC', decimals: 18, symbol: 'MATIC' },
-                  rpcUrls: ['https://polygon-rpc.com/'],
+                  nativeCurrency: { name: 'ETH', decimals: 18, symbol: 'ETH' },
+                  rpcUrls: ['https://eth.public-rpc.com'],
                 },
               ],
             });
