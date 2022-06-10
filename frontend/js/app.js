@@ -104,7 +104,7 @@ async function checkChain() {
   let chainId = 0;
   if(chain === 'rinkeby') {
     chainId = 4;
-  } else if(chain === 'Ethereum') {
+  } else if(chain === 'ethereum') {
     chainId = 1;
   }
   if (window.ethereum.networkVersion !== chainId) {
@@ -130,7 +130,7 @@ async function checkChain() {
                 },
               ],
             });
-          } else if(chain === 'Ethereum') {
+          } else if(chain === 'ethereum') {
             await window.ethereum.request({
               method: 'wallet_addEthereumChain',
               params: [
@@ -223,8 +223,8 @@ async function loadInfo() {
   let priceType = '';
   if(chain === 'rinkeby') {
     priceType = 'ETH';
-  } else if (chain === 'polygon') {
-    priceType = 'MATIC';
+  } else if (chain === 'ethereum') {
+    priceType = 'ETH';
   }
   const price = web3.utils.fromWei(info.deploymentConfig.mintPrice, 'ether');
   const pricePerMint = document.getElementById("pricePerMint");
@@ -288,8 +288,8 @@ function setTotalPrice() {
   let priceType = '';
   if(chain === 'rinkeby') {
     priceType = 'ETH';
-  } else if (chain === 'polygon') {
-    priceType = 'MATIC';
+  } else if (chain === 'ethereum') {
+    priceType = 'ETH';
   }
   const price = web3.utils.fromWei(totalPriceWei.toString(), 'ether');
   totalPrice.innerText = `${price} ${priceType}`;

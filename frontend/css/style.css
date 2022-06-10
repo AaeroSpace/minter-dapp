@@ -1,20 +1,25 @@
 /* FONTS */
+@font-face {
+  font-family: 'gothambook';
+  src: url('gothambook-webfont.woff2') format('woff2'),
+       url('gothambook-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 
-@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
+}
 /* GLOBAL STYLES */
 
 :root {
-  --font-primary: "Poppins", sans-serif;
-  --font-secondary: "Arvo", serif;
-  --font-code: "Roboto", monospace;
-  --bg-color: #00163f;
-  --bg-color-transparent: #00163f80;
+  --font-primary: 'gothambook', sans-serif;
+  --font-secondary: 'gothambook', sans-serif;
+  --font-code: 'gothambook', sans-serif;
+  --bg-color: #000000;
+  --bg-color-transparent: #00000080;
   --font-color: #ffffff;
-  --btn-bg-color: #ffffff;
-  --accent-color: #be7efe;
-  --header-shadow: var(--accent-color) 0px 0px 5px;
-  --card-shadow: var(--accent-color) 0px 0px 20px;
+  --btn-bg-color: #f9ce42;
+  /*--accent-color: #ffffff;*/
+  /*--header-shadow: var(--accent-color) 0px 0px 5px;
+  --card-shadow: var(--accent-color) 0px 0px 20px;*/
 }
 
 * {
@@ -61,6 +66,7 @@ header .container {
   align-items: center;
 }
 
+
 /* NOT CONNECTED */
 .not-connected {
   align-items: center;
@@ -79,7 +85,7 @@ header .container {
 
 .not-connected h1 {
   text-shadow: 2px 2px 0 var(--accent-color);
-  font-style: italic;
+  font-style: normal;
   margin: 2rem 0;
   font-size: 3.5rem;
 }
@@ -94,7 +100,7 @@ header .container {
   text-decoration: none;
   color: var(--accent-color);
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 /* BUTTONS */
@@ -105,8 +111,8 @@ header .container {
   background: var(--btn-bg-color);
   color: var(--accent-color);
   font-family: var(--font-secondary);
-  font-style: italic;
-  font-weight: bold;
+  font-style: normal;
+  font-weight: normal;
   font-size: 1rem;
   text-align: center;
   text-transform: capitalize;
@@ -211,7 +217,7 @@ section {
 
 .countdown h1 {
   text-shadow: 2px 2px 0 var(--accent-color);
-  font-style: italic;
+  font-style: normal;
   margin: 2rem 0;
   font-size: 3.5rem;
   text-align: center;
@@ -319,17 +325,17 @@ section {
 .splide {
   position: absolute;
   top: 90px;
-  left: 5rem;
+  left: 90px;
   z-index: -1;
 }
 
 .splide__slide {
   border: var(--accent-color) solid;
-  border-width: 5px 10px;
+  border-width: 10px 10px;
 }
 
 .splide__slide img {
-  width: 100%;
+  width: 45%;
 }
 
 /* SPINNER */
@@ -342,7 +348,7 @@ section {
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .menu {
     gap: 1rem;
   }
